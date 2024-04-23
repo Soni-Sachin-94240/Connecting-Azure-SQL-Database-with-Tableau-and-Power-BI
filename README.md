@@ -5,8 +5,6 @@
 
 Connecting Azure SQL Database with Tableau or Power BI poses challenges like setting up correctly, which can lead to problems accessing data. People often lack clear instructions, causing time wasted on trial and error. We need a clear, easy process that ensures secure connections, enabling smooth data import and analysis in Tableau or Power BI. This will empower users to make informed decisions faster using their Azure SQL Database data
 
-![0 AzureConnectionError](https://github.com/Soni-Sachin-94240/MS-Fabric-Extract-and-Load-from-External-API/assets/132342151/d98059f0-4aa4-4559-8069-e80c9879424f)
-
 
 ### Datasource
      Azure SQL Database
@@ -33,14 +31,14 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
 
 ### Steps followed 
 
-- Step 1: Create Azure Account
+- #### Step 1: Create Azure Account
 
      (a) Visit the Azure portal at https://portal.azure.com/ and create an account if you haven't already.
 
 ![1 Azure Home](https://github.com/Soni-Sachin-94240/MS-Fabric-Extract-and-Load-from-External-API/assets/132342151/10083a55-8493-41f3-a227-18fdf32b1cc2)
 
 
-- Step 2: Create Database
+- #### Step 2: Create Database
      
      (a) Create a Server:
      
@@ -54,7 +52,7 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
      - Select "New database" and provide the necessary details to create a new database.
 
 
-- Step 3: Configure Server Settings
+- #### Step 3: Configure Server Settings
 
      (a) Note Database Information:
      - Make note of the server name, user name, and password set during the server creation process.
@@ -65,6 +63,9 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
      - In the Azure portal, navigate to your database server.
      - Under "Settings," select "Firewalls and virtual networks."
      - Click on "Add client IP" to allow access from your current IP address. If accessing from other IP addresses, add them accordingly.
+
+     ![0 AzureConnectionError](https://github.com/Soni-Sachin-94240/MS-Fabric-Extract-and-Load-from-External-API/assets/132342151/d98059f0-4aa4-4559-8069-e80c9879424f)
+
      
      (c) Enable Public Accessibility:
      - Under "Settings" for your database server, navigate to "Connection security."
@@ -72,7 +73,7 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
 
 
 
-- Step 4: Connect with Tableau Cloud
+- #### Step 4: Connect with Tableau Cloud
      
      (a) Establishing the Connection
      - Navigate to "Add Data Source" within Tableau Cloud.
@@ -100,7 +101,7 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
 
      ![2 Tab Datasource Screen](https://github.com/Soni-Sachin-94240/MS-Fabric-Extract-and-Load-from-External-API/assets/132342151/1fc35e4a-2e5c-4a37-8a7d-794227c21158)
 
-- Step 5: Connect with Power BI
+- #### Step 5: Connect with Power BI
      
      (a) Get Data from Azure SQL Database
      - Navigate to the "Get Data" option and select "Azure" -> "Azure SQL Database.
@@ -126,6 +127,23 @@ Connecting Azure SQL Database with Tableau or Power BI poses challenges like set
 
      - Utilize the imported data tables for creating insightful dashboards and visualizations.
      ![PBI 3 1 Import Data tables](https://github.com/Soni-Sachin-94240/MS-Fabric-Extract-and-Load-from-External-API/assets/132342151/4616dbfc-222c-4284-9703-999b4af17682)
+
+- #### Step 6: Connect via Power BI Service Account
+     - Publish the report to the designated workspace in the Power BI service account.
+     ![PBI 5 1 Workspace](https://github.com/Soni-Sachin-94240/Connecting-Azure-SQL-Database-with-Tableau-and-Power-BI/assets/132342151/28e0fc70-eefa-4f9d-a29f-2af22eaa93c2)
+
+     - Navigate to the settings for the published report.
+     ![PBI 5 2 Settings ](https://github.com/Soni-Sachin-94240/Connecting-Azure-SQL-Database-with-Tableau-and-Power-BI/assets/132342151/f42d0dcb-99f9-4e18-b517-afaf00cf9065)
+
+     - Access "Data Source Credentials" and select "Edit Credentials."
+     ![PBI 5 3 Data Source Setting](https://github.com/Soni-Sachin-94240/Connecting-Azure-SQL-Database-with-Tableau-and-Power-BI/assets/132342151/bc83b4e3-015b-4a31-86ba-1c5670c05135)
+
+     - Provide access credentials, specifying the Authentication Method, username, password, and Privacy Level as required.
+     ![PBI 5 4 Data Source Credential](https://github.com/Soni-Sachin-94240/Connecting-Azure-SQL-Database-with-Tableau-and-Power-BI/assets/132342151/708ca160-a985-46ee-89db-9c9147f08c74)
+
+     - Schedule Resfresh setting
+     ![PBI 5 5 Schedule Refresh](https://github.com/Soni-Sachin-94240/Connecting-Azure-SQL-Database-with-Tableau-and-Power-BI/assets/132342151/c80c59f4-45cb-439d-8b3e-69125f3603f1)
+ 
 
 
 
